@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>พันธุ์พืชในโรงเรียนวังทองพิทยาคม</title>
+
+<style>
+/* ===== พื้นฐาน ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#f1f8f4, #e8f5e9);
+    color: #333;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ===== Menu ===== */
+nav {
+    background-color: #1b5e20;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    padding: 15px 26px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #388e3c;
+}
+
+/* ===== Layout ===== */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ===== Card ===== */
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    margin-bottom: 50px;
+}
+
+/* ===== Headings ===== */
+h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #66bb6a;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* ===== Intro text ===== */
+.card p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ===== Plant grid ===== */
+.plant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.plant-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plant-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.plant-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.plant-card h3 {
+    text-align: center;
+    padding: 14px;
+    margin: 0;
+    background-color: #f1f8f4;
+    font-size: 16px;
+}
+
+.plant-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* ===== Decoration ===== */
+.decor {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    width: 85px;
+    opacity: 0.9;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 60px;
+}
+
+/* ===== Scroll animation ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌱 พันธุ์พืชในโรงเรียนวังทองพิทยาคม</h1>
+    <p>แหล่งเรียนรู้พันธุ์พืชภายในโรงเรียน</p>
+</header>
+
+<nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="plants.html">รายการพืช</a>
+    <a href="about.html">ผู้จัดทำ</a>
+</nav>
+
+<div class="container">
+
+<div class="card reveal">
+    <h2>🌼 ยินดีต้อนรับ</h2>
+    <p>
+        เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมข้อมูลพันธุ์พืชภายในโรงเรียนวังทองพิทยาคม
+        เพื่อใช้เป็นแหล่งเรียนรู้สำหรับนักเรียนและผู้ที่สนใจ  
+        สามารถคลิกที่รายการพืชเพื่อดูรายละเอียดของพืชแต่ละชนิดได้ 🌿
+    </p>
+</div>
+
+<div class="card reveal">
+    <h2>🍀 พันธุ์พืชในโรงเรียน</h2>
+
+    <div class="plant-list">
+
+        <div class="plant-card">
+            <a href="plant.html?id=0">
+                <img src="images/24219.jpg" alt="กกอียิปต์">
+                <h3>กกอียิปต์ (ปาปิรัส)</h3>
+            </a>
+        </div>
+
+        <div class="plant-card">
+            <a href="plant.html?id=1">
+                <img src="images/24220.jpg" alt="ต้นคูณ">
+                <h3>ต้นคูณ</h3>
+            </a>
+        </div>
+
+        <div class="plant-card">
+            <a href="plant.html?id=2">
+                <img src="images/24218.jpg" alt="ผักตบชวา">
+                <h3>ผักตบชวา</h3>
+            </a>
+        </div>
+
+        <div class="plant-card">
+            <a href="plant.html?id=3">
+                <img src="images/24226.jpg" alt="ไทรเกาหลี">
+                <h3>ไทรเกาหลี</h3>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<img src="images/plant-cartoon.png" class="decor" alt="การ์ตูนตกแต่ง">
+
+<footer>
+    <p>© 2025 เว็บไซต์พันธุ์พืชในโรงเรียนวังทองพิทยาคม</p>
+</footer>
+
+<script>
+function revealOnScroll() {
+    document.querySelectorAll(".reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายการพันธุ์พืช</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#f1f8f4, #e8f5e9);
+}
+
+/* Header */
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Menu */
+nav {
+    background-color: #1b5e20;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #388e3c;
+}
+
+/* Layout */
+.container {
+    padding: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+/* Headings */
+h2 {
+    color: #2e7d32;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #66bb6a;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+/* ===== Search box ===== */
+.search-box {
+    margin: 20px 0;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* ===== Plant list UI ===== */
+.plant-item {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background 0.2s;
+}
+
+.plant-item:hover {
+    background: #f1f8f4;
+}
+
+.plant-item:last-child {
+    border-bottom: none;
+}
+
+.plant-item a {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* ระยะห่างรูปกับข้อความ */
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.plant-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.plant-info h3 {
+    margin: 0 0 8px 0;
+    color: #2e7d32;
+}
+
+.plant-info p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Scroll animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌿 รายการพันธุ์พืชในโรงเรียน</h1>
+    <p>ค้นหาและคลิกเพื่อดูรายละเอียดพืช</p>
+</header>
+
+<nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="plants.html">รายการพืช</a>
+    <a href="about.html">ผู้จัดทำ</a>
+</nav>
+
+<div class="container">
+
+<div class="card reveal">
+    <h2>📋 รายชื่อพันธุ์พืช</h2>
+
+    <!-- ช่องค้นหา -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 ค้นหาชื่อพืช...">
+    </div>
+
+    <div id="plantList">
+
+        <div class="plant-item">
+            <a href="plant.html?id=0">
+                <img src="images/24219.jpg" alt="กกอียิปต์">
+                <div class="plant-info">
+                    <h3>กกอียิปต์ (ปาปิรัส)</h3>
+                    <p>พืชน้ำล้มลุก พบในพื้นที่ชุ่มน้ำ</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="plant-item">
+            <a href="plant.html?id=1">
+                <img src="images/24220.jpg" alt="ต้นคูณ">
+                <div class="plant-info">
+                    <h3>ต้นคูณ</h3>
+                    <p>ไม้ยืนต้น ดอกสีเหลือง เป็นไม้ประจำชาติไทย</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="plant-item">
+            <a href="plant.html?id=2">
+                <img src="images/24218.jpg" alt="ผักตบชวา">
+                <div class="plant-info">
+                    <h3>ผักตบชวา</h3>
+                    <p>พืชน้ำลอยน้ำ เจริญเติบโตเร็ว</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="plant-item">
+            <a href="plant.html?id=3">
+                <img src="images/24226.jpg" alt="ไทรเกาหลี">
+                <div class="plant-info">
+                    <h3>ไทรเกาหลี</h3>
+                    <p>ไม้พุ่ม ตัดแต่งง่าย นิยมปลูกเป็นแนวรั้ว</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <p>© 2025 เว็บไซต์พันธุ์พืชในโรงเรียนวังทองพิทยาคม</p>
+</footer>
+
+<script>
+/* Scroll animation */
+function revealOnScroll() {
+    document.querySelectorAll(".reveal").forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+/* Search function */
+document.getElementById("searchInput").addEventListener("keyup", function () {
+    const keyword = this.value.toLowerCase();
+    document.querySelectorAll(".plant-item").forEach(item => {
+        const text = item.innerText.toLowerCase();
+        item.style.display = text.includes(keyword) ? "" : "none";
+    });
+});
+</script>
+
+</body>
+</html>

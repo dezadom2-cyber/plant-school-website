@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผู้จัดทำ | พันธุ์พืชในโรงเรียน</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#f1f8f4, #e8f5e9);
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+nav {
+    background-color: #1b5e20;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #388e3c;
+}
+
+.container {
+    padding: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2e7d32;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #66bb6a;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+/* เอฟเฟกต์เลื่อน */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>👩‍🎓 ผู้จัดทำเว็บไซต์</h1>
+    <p>เว็บไซต์พันธุ์พืชในโรงเรียนวังทองพิทยาคม</p>
+</header>
+
+<nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="plants.html">รายการพืช</a>
+    <a href="about.html">ผู้จัดทำ</a>
+</nav>
+
+<div class="container">
+
+<div class="card reveal">
+    <h2>📘 ชื่อโครงงาน</h2>
+    <p>เว็บไซต์พันธุ์พืชในโรงเรียนวังทองพิทยาคม</p>
+</div>
+
+<div class="card reveal">
+    <h2>🧑‍💻 ผู้จัดทำ</h2>
+    <ul>
+        <li>นายณัฐชัย ศรีวิเศษ</li>
+        <li>นางสาวอนัญพร ขำโอด</li>
+    </ul>
+    <p><b>ระดับชั้น:</b> มัธยมศึกษาปีที่ 6/5</p>
+    <p><b>โรงเรียน:</b> โรงเรียนวังทองพิทยาคม</p>
+</div>
+
+<div class="card reveal">
+    <h2>🎯 วัตถุประสงค์</h2>
+    <ol>
+        <li>เพื่อรวบรวมข้อมูลพันธุ์พืชภายในโรงเรียน</li>
+        <li>เพื่อใช้เป็นแหล่งเรียนรู้ด้านพืชพรรณ</li>
+        <li>เพื่อฝึกทักษะการพัฒนาเว็บไซต์</li>
+    </ol>
+</div>
+
+<div class="card reveal">
+    <h2>👨‍🏫 ครูที่ปรึกษา</h2>
+    <p>ครู………………………………</p>
+    <p><b>ปีการศึกษา:</b> 2568</p>
+</div>
+
+</div>
+
+<footer>
+    <p>© 2025 เว็บไซต์พันธุ์พืชในโรงเรียนวังทองพิทยาคม</p>
+</footer>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
